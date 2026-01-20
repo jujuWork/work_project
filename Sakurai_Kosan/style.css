@@ -16,11 +16,84 @@
   --inner-font-size: 16px;
 }
 
-.recruit-container {
-  border: 1px solid red;
+@font-face {
+  font-family: "Tsuku";
+  src: url("./font/TsukuhouShogoMin-OFL.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto_Serif";
+  src: url("./font/noto-serif-jp-v33-japanese_latin-700.woff2") format("woff2");
+}
+
+.recruit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 1366px;
   height: 835px;
   background-color: var(--main-bg-color);
+  z-index: -1;
+  position: relative;
+}
+
+.recruit__center-container {
+  width: 100%;
+  max-width: 691px;
+  height: 473px;
+  background: url("./images/center/center.png") no-repeat center center / cover;
+  z-index: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.center__top-arr {
+  width: 38px;
+  height: 32px;
+  background: url("./images/center/top_arr.png") no-repeat center center / cover;
+  z-index: 1;
+  position: absolute;
+  top: 2em;
+}
+
+.center__btm-arr {
+  width: 38px;
+  height: 32px;
+  background: url("./images/center/btm_arr.png") no-repeat center center / cover;
+  position: absolute;
+  bottom: 2em;
+}
+
+.center__info-container {
+  border: 1px solid white;
+  max-width: 328px;
+  width: 100%;
+  height: auto;
+}
+
+.center__info-container p {
+  font-family: "Tsuku", serif;
+  font-style: normal;
+  font-size: var(--main-font-size);
+  text-shadow: 3px 3px #ffffff;
+}
+
+.center__info-container span {
+  font-size: var(--inner-font-size);
+  font-family: "Noto_Serif";
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 1px;
+}
+
+.info__btm-img {
+  background: url("./images/center/center_btm.png") no-repeat center center /
+    cover;
+  width: 100%;
+  height: 16px;
 }
 /* ▲▲ ここまで ▲▲ */
