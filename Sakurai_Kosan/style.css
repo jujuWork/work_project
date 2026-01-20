@@ -40,6 +40,7 @@ a {
   background-color: var(--main-bg-color);
   z-index: -1;
   position: relative;
+  background: url("./images/1.png") no-repeat center center / cover;
 }
 
 /********* CENTER CONTAINER *********/
@@ -117,20 +118,39 @@ LEFT IMAGES CONTAINER
 *********/
 
 .left__first-container {
-  border: 1px solid black;
   height: 100%;
-  width: 262px;
   position: absolute;
+  display: flex;
+}
+
+.left__second-container {
+  height: 100%;
+  position: absolute;
+  left: -285px;
+  border: 1px solid black;
 }
 
 .top-img {
+  width: 262px;
   height: 227px;
-  background: url("./images/left/first-container/ex.png") no-repeat center
-    left / cover;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   position: absolute;
-  width: 100%;
-  left: -10px;
+  top: 3.8em;
 }
 
+.mid-img {
+  width: 262px;
+  height: 227px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  position: absolute;
+  top: 3.8em;
+}
+
+.btm-img {
+  width: 262px;
+  height: 227px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  position: absolute;
+  bottom: 3.8em;
+}
 /* ▲▲ ここまで ▲▲ */
