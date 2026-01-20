@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ▼▼ ここから ▼▼ */
+
+:root {
+  /* BACKGROUND_COLOR */
+  --main-bg-color: #1c1c1c;
+
+  /* FONT_SIZE */
+  --main-font-size: 80px;
+  --sub-font-size: 24px;
+  --inner-font-size: 16px;
+}
+
+.recruit-container {
+  border: 1px solid red;
+  width: 100%;
+  max-width: 1366px;
+  height: 835px;
+  background-color: var(--main-bg-color);
+}
+/* ▲▲ ここまで ▲▲ */
