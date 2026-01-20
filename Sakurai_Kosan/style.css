@@ -5,7 +5,7 @@
 }
 
 /* ▼▼ ここから ▼▼ */
-
+/********* RECRUIT *********/
 :root {
   /* BACKGROUND_COLOR */
   --main-bg-color: #1c1c1c;
@@ -14,6 +14,10 @@
   --main-font-size: 80px;
   --sub-font-size: 24px;
   --inner-font-size: 16px;
+}
+
+a {
+  text-decoration: none;
 }
 
 @font-face {
@@ -38,6 +42,8 @@
   position: relative;
 }
 
+/********* CENTER CONTAINER *********/
+
 .recruit__center-container {
   width: 100%;
   max-width: 691px;
@@ -57,7 +63,7 @@
   background: url("./images/center/top_arr.png") no-repeat center center / cover;
   z-index: 1;
   position: absolute;
-  top: 2em;
+  top: 25px;
 }
 
 .center__btm-arr {
@@ -65,11 +71,10 @@
   height: 32px;
   background: url("./images/center/btm_arr.png") no-repeat center center / cover;
   position: absolute;
-  bottom: 2em;
+  bottom: 25px;
 }
 
 .center__info-container {
-  border: 1px solid white;
   max-width: 328px;
   width: 100%;
   height: auto;
@@ -82,12 +87,13 @@
   text-shadow: 3px 3px #ffffff;
 }
 
-.center__info-container span {
+.center__sub-info {
   font-size: var(--inner-font-size);
   font-family: "Noto_Serif";
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0 1px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .info__btm-img {
@@ -96,4 +102,35 @@
   width: 100%;
   height: 16px;
 }
+
+/********* IMAGES CONTAINER *********/
+.recruit__left-container,
+.recruit__right-container {
+  height: 100%;
+  position: relative;
+}
+
+/********* 
+--------
+LEFT IMAGES CONTAINER
+--------
+*********/
+
+.left__first-container {
+  border: 1px solid black;
+  height: 100%;
+  width: 262px;
+  position: absolute;
+}
+
+.top-img {
+  height: 227px;
+  background: url("./images/left/first-container/ex.png") no-repeat center
+    left / cover;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  position: absolute;
+  width: 100%;
+  left: -10px;
+}
+
 /* ▲▲ ここまで ▲▲ */
