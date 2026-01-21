@@ -30,28 +30,33 @@ a {
   src: url("./font/noto-serif-jp-v33-japanese_latin-700.woff2") format("woff2");
 }
 
+main {
+  position: relative;
+}
+
 .recruit {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 1366px;
-  height: 835px;
-  background-color: var(--main-bg-color);
-  z-index: -1;
+  min-width: 300px;
+  min-height: 835px;
+  /* background-color: var(--main-bg-color); */
   position: relative;
-  background: url("./images/1.png") no-repeat center center / cover;
+  aspect-ratio: 16 / 9;
 }
 
 /********* CENTER CONTAINER *********/
 
 .recruit__center-container {
+  border: 1px solid red;
   width: 100%;
   max-width: 691px;
   height: 473px;
   background: url("./images/center/center.png") no-repeat center center / cover;
-  z-index: 0;
-  position: relative;
+  z-index: 1;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,11 +110,6 @@ a {
 }
 
 /********* IMAGES CONTAINER *********/
-.recruit__left-container,
-.recruit__right-container {
-  height: 100%;
-  position: relative;
-}
 
 /********* 
 --------
@@ -117,40 +117,68 @@ LEFT IMAGES CONTAINER
 --------
 *********/
 
-.left__first-container {
-  height: 100%;
+.recruit__left-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 262px));
+  grid-template-rows: repeat(4, minmax(auto, 227px));
+  position: relative;
+  left: 0;
+  width: 100%;
+}
+
+.container1 {
+  grid-row: 1 / -1;
   position: absolute;
+  left: -10%;
+}
+
+.container1__img,
+.container2__img,
+.container3__img {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.left__second-container {
+.container2 {
+  grid-row: 1 / -1;
+  position: absolute;
+  left: 8%;
+  top: 15%;
+}
+
+.container3 {
+  grid-row: 1 / -1;
+  position: absolute;
+  left: 26%;
+  width: 100%;
+}
+
+.container3__img img:nth-child(1) {
+  position: absolute;
+  top: 4.5em;
+  left: -2.5em;
+}
+
+.grid_left {
+  border: 1px solid orange;
   height: 100%;
-  position: absolute;
-  left: -285px;
-  border: 1px solid black;
 }
 
-.top-img {
+.grid-left div > img {
   width: 262px;
   height: 227px;
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  position: absolute;
-  top: 3.8em;
+  background-size: cover;
 }
 
-.mid-img {
-  width: 262px;
-  height: 227px;
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  position: absolute;
-  top: 3.8em;
-}
+/* ▲▲ ここまで ▲▲ */
 
+/*
 .btm-img {
   width: 262px;
   height: 227px;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   position: absolute;
   bottom: 3.8em;
-}
-/* ▲▲ ここまで ▲▲ */
+} */
