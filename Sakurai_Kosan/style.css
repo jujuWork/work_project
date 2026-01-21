@@ -73,6 +73,7 @@ main {
 }
 
 .center_bg img {
+  position: relative;
   text-align: center;
 }
 
