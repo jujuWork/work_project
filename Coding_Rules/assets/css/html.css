@@ -21,9 +21,40 @@ header {
 }
 
 .header__title {
-  border: 1px solid red;
   text-align: center;
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 60px;
+}
+
+.list__container {
+  border: 1px solid red;
+  width: 100%;
+  list-style: none;
+}
+
+.list__items {
+  font-size: 16px;
+}
+
+.item__count::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("../../HTML/images/icons/note.png") no-repeat center center /
+    cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.item__reason::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("../../HTML/images/icons/arr.png") no-repeat center center /
+    cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
 }
