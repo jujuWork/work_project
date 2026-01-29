@@ -31,10 +31,20 @@ header {
   border: 1px solid red;
   width: 100%;
   list-style: none;
+  margin-top: 2em;
 }
 
 .list__items {
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.item__count {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .item__count::before {
@@ -50,11 +60,38 @@ header {
 
 .item__reason::before {
   content: "";
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background: url("../../HTML/images/icons/arr.png") no-repeat center center /
     cover;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+.item__orderlist {
+  margin-left: 30px;
+}
+
+.item__description {
+  margin-left: 30px;
+}
+
+.item__description p {
+  margin-bottom: 1rem;
+}
+
+.item__description img {
+  width: 600px;
+}
+
+.zoom {
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.zoom.zoomed {
+  transform: scale(2);
+  margin: 0 auto;
+  display: flex;
 }
