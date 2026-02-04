@@ -15,26 +15,186 @@
     </header>
     <main>
         <ul class="list__container">
+
+            <!-- FIRST ITEM -->
             <li class="list__items">
-                <p class="item__count">正しいHTMLの基本構造を使う</p>
+                <p class="item__list">正しいHTMLの基本構造を使う</p>
                 <p class="item__reason">理由:</p>
                 <div class="item__description">
                     <p>ブラウザが正しく読み込めますし、後から見ても分かりやすくなります。</p>
                     <img src="./images/img01.png" alt="img01" class="zoom" onclick="this.classList.toggle('zoomed')">
                 </div>
             </li>
+
+            <!-- SECOND ITEM -->
             <li class="list__items">
-                <p class="item__count">意味のあるタグ(セマンティックHTML)を使う</p>
+                <p class="item__list">意味のあるタグ(セマンティックHTML)を使う</p>
                 <p class="item__reason">
                     セマンティックな（意味のある）タグを使う
                     よく使うタグ：
                 </p>
                 <ul class="item__orderlist">
-                    <li>dwada</li>
+                    <li>
+                        <span class="code__italic">
+                            < header> / < footer>
+                        </span> : ページやセクションの<strong>上部・下部</strong>に使う
+                    </li>
+                    <li>
+                        <span class="code__italic">
+                            < nav>
+                        </span> : <strong>メインのナビゲーションリンク</strong>用
+                    </li>
+                    <li>
+                        <span class="code__italic">
+                            < aside>
+                        </span> : <strong>補足情報やサイドコンテンツ</strong>用 （サイドバー、関連記事、広告、プロフィール、注釈など）
+                    </li>
+                    <li>
+                        <span class="code__italic">
+                            < main>
+                        </span> : ページ内の<strong>メインコンテンツ</strong>に使う（1ページに1回だけ）
+                    </li>
+                    <li>
+                        <span class="code__italic">
+                            < article> / < section>
+                        </span> : <strong>関連するコンテンツのグループ化</strong>や、<strong>独立した記事・投稿</strong>に使う
+                    </li>
+                    <li>
+                        <span class="code__italic">
+                            < figure>
+                        </span> : <strong>画像・図・コード例・グラフ</strong>などの自己完結したコンテンツ用
+                    </li>
+                </ul>
+
+                <div class="item__description">
+                    <img src="./images/img02.png" alt="img01" class="zoom" onclick="this.classList.toggle('zoomed')">
+                </div>
+
+                <div class="item__description">
+                    <p class="NG">NG:</p>
+                    <img src="./images/img02-wrong.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                </div>
+                <div class="item__description">
+                    <p class="OK">OK:</p>
+                    <img src="./images/img02-correct.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                </div>
+                </div>
+            </li>
+
+            <!-- THIRD ITEM -->
+            <li class="list__items">
+                <p class="item__list">画像には必ず <span class="code__italic--alt">alt</span> を書く</p>
+                <p class="item__reason">画像には説明文をつけましょう。</p>
+                <div class="item__description">
+                    <p class="NG">NG:</p>
+                    <img src="./images/img03-wrong.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                </div>
+                <div class="item__description">
+                    <p class="OK">OK:</p>
+                    <img src="./images/img03-correct.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                </div>
+                <p class="item__reason--merit">メリット：</p>
+                <ul class="item__orderlist">
+                    <li>画像が表示されない時に文字が出る</li>
+                    <li>画面読み上げ対応</li>
                 </ul>
                 <div class="item__description">
-                    <p>ブラウザが正しく読み込めますし、後から見ても分かりやすくなります。</p>
-                    <img src="./images/img01.png" alt="img01" class="zoom" onclick="this.classList.toggle('zoomed')">
+                    <p>画像のサイズ（幅・高さ）を指定するための任意タグ（属性）</p>
+                    <img src="./images/img03-size.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                </div>
+            </li>
+
+            <!-- FOURTH ITEM -->
+            <li class="list__items">
+                <p class="item__list">コードは見やすく書く（インデント）</p>
+                <p class="item__reason">読みやすいコードは修正もしやすいです。</p>
+                <div class="item__description">
+                    <p class="NG">NG:</p>
+                    <img src="./images/img04-wrong.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                </div>
+                <div class="item__description">
+                    <p class="OK">OK:</p>
+                    <img src="./images/img04-correct.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                </div>
+            </li>
+
+            <!-- FIFTH ITEM -->
+            <li class="list__items">
+                <p class="item__list">クラス名はBEMルールで分かりやすく付ける</p>
+                <p class="item__reason">
+                    ラス名は「何のパーツか」「どこに属しているか」が分かるように付けます。
+                    <br>その時に便利なのがBEM(Block / Element / Modifier)です。
+                </p>
+                <div class="item__description">
+                    <p>BEMの基本形:</p>
+                    <ul>
+                        <li>
+                            <strong>block</strong>: 大きなかたまり(例:header、card、button)
+                        </li>
+                        <li>
+                            <strong>element</strong>: blockの中の要素(例:title、image)
+                        </li>
+                        <li>
+                            <strong>modifier</strong>: 状態やバリエーション(例:large、active)
+                        </li>
+                    </ul>
+                </div>
+                <div class="item__description">
+                    <p class="NG">NG クラス名:</p>
+                    <img src="./images/img05-wrong.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                    <ul>
+                        <li>何のboxか分からない</li>
+                        <li>他のページで再利用しにくい</li>
+                    </ul>
+                </div>
+                <div class="item__description">
+                    <p class="OK">OK BEMクラス名:</p>
+                    <img src="./images/img05-correct.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                    <ul><strong>BEMを使うメリット</strong>
+                        <li>クラス名を見ただけで役割が分かる</li>
+                        <li>CSSが壊れにくい</li>
+                        <li>チーム開発でも混乱しない</li>
+                    </ul>
+                </div>
+                <p class="bem__link">詳しい情報は以下のリンクをご覧ください：
+                    <a href="https://qiita.com/takahirocook/items/01fd723b934e3b38cbbc"
+                        target="_blank">https://qiita.com/takahirocook/items/01fd723b934e3b38cbbc
+                    </a>
+                </p>
+            </li>
+
+            <!-- SIXTH ITEM -->
+            <li class="list__items">
+                <p class="item__list"> 見出しタグは正しい適切に使う</p>
+                <div class="item__description">
+                    <ul><span class="code__italic">
+                            < h1>
+                        </span> は1ページに1つだけ使う
+                        <li>ページのメインテーマを表す</li>
+                        <li>検索エンジンがコンテンツ構造を理解しやすくなる</li>
+                    </ul>
+                </div>
+                <div class="item__description">
+                    <p class="NG">NG:</p>
+                    <img src="./images/img06-wrong.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                </div>
+                <div class="item__description">
+                    <p class="OK">OK:</p>
+                    <img src="./images/img06-correct.png" alt="img01" class="zoom"
+                        onclick="this.classList.toggle('zoomed')">
+                    <ul>
+                        <li>見出しレベルを飛ばさない(例:h1 → h3 はNG)</li>
+                    </ul>
                 </div>
             </li>
         </ul>
