@@ -19,7 +19,6 @@
             <!-- FIRST ITEM -->
             <li class="list__items">
                 <p class="item__list">正しいHTMLの基本構造を使う</p>
-                <p class="item__reason">理由:</p>
                 <div class="item__description">
                     <p>ブラウザが正しく読み込めますし、後から見ても分かりやすくなります。</p>
                     <img src="./images/img01.png" alt="img01" class="zoom" onclick="this.classList.toggle('zoomed')">
@@ -28,7 +27,7 @@
 
             <!-- SECOND ITEM -->
             <li class="list__items">
-                <p class="item__list">意味のあるタグ(セマンティックHTML)を使う</p>
+                <p class="item__list">意味のあるタグ(セマンティックタグ)を使う</p>
                 <p class="item__reason">
                     セマンティックな（意味のある）タグを使う
                     よく使うタグ：
@@ -85,8 +84,8 @@
 
             <!-- THIRD ITEM -->
             <li class="list__items">
-                <p class="item__list">画像には必ず <span class="code__italic--alt">alt</span> を書く</p>
-                <p class="item__reason">画像には説明文をつけましょう。</p>
+                <p class="item__list">画像には必ず <span class="code__italic--alt">alt</span> (説明)を書く</p>
+                <p class="item__reason">画像が表示されないときに代替テキストを表示するため</p>
                 <div class="item__description">
                     <p class="NG">NG:</p>
                     <img src="./images/img03-wrong.png" alt="img01" class="zoom"
@@ -136,7 +135,7 @@
                     <p>BEMの基本形:</p>
                     <ul>
                         <li>
-                            <strong>block</strong>: 大きなかたまり(例:header、card、button)
+                            <strong>block</strong>: 部品のまとまり(例:header、card、button)
                         </li>
                         <li>
                             <strong>element</strong>: blockの中の要素(例:title、image)
@@ -174,7 +173,7 @@
 
             <!-- SIXTH ITEM -->
             <li class="list__items">
-                <p class="item__list"> 見出しタグは正しい適切に使う</p>
+                <p class="item__list"> 見出しタグは適切に使う</p>
                 <div class="item__description">
                     <ul><span class="code__italic">
                             < h1>
