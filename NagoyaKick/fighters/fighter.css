@@ -27,6 +27,10 @@ body {
   min-width: 300px;
 }
 
+.fighter__container--first {
+  border: 1px solid orange;
+}
+
 .fighter__sign {
   margin-left: 60px;
 }
