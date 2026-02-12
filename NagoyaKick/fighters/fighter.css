@@ -15,28 +15,39 @@ body {
 }
 
 .section {
-  border: 1px solid red;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: auto;
 }
 
 .fighter__container {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 100vh;
+  min-width: 300px;
 }
 
 .fighter__sign {
-  position: relative;
   margin-left: 60px;
 }
 
-.fighter__group01 {
-  background-image: url("./images/group01.png");
-  background-repeat: no-repeat;
-  background-position: center;
+.fighter__sign > img {
+  width: clamp(100px, 10vw, 300px);
+}
+
+.fighter__group {
+  position: relative;
+  width: 100%;
+}
+
+.fighter__group > img {
+  width: 100%;
+  height: auto;
   background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .fighter__sign {
+    margin-left: 5px;
+  }
 }
